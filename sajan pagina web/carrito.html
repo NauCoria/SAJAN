@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Cotillón Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- ... (mismo header que index.html para consistencia) ... -->
+        <div class="top-bar">
+            <span>Atención Personalizada | Envíos a todo el país</span>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html"><span><img src="img/logo sajan blanco@4x-8.png" alt="SAJAN COTILLON"></span> </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-icons">
+                <a href="#" class="nav-icon-item" id="menu-toggle"><i class="fas fa-bars"></i> <span class="icon-text">Menú</span></a>
+                <a href="#" class="nav-icon-item"><i class="fas fa-question-circle"></i> <span class="icon-text">Ayuda</span></a>
+                <a href="#" class="nav-icon-item"><i class="fas fa-user"></i> <span class="icon-text">Mi Cuenta</span></a>
+                <a href="carrito.html" class="nav-icon-item">
+                    <i class="fas fa-shopping-cart"></i> <span class="icon-text">Mi Carrito</span>
+                    <span class="cart-count">2</span> <!-- Ejemplo: 2 items en carrito -->
+                </a>
+            </div>
+        </nav>
+        <div class="sidebar" id="sidebar-menu">
+            <button class="close-btn" id="close-sidebar-btn">&times;</button>
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="#">Fiestas Temáticas <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Cumpleaños <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Decoración Neón <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Globos <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Repostería Creativa <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">Ofertas <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+            <hr>
+            <a href="#" class="sidebar-link">Iniciar Sesión</a>
+            <a href="#" class="sidebar-link">Crear Cuenta</a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <section class="cart-container">
+            <h2>Tu Carrito de Compras</h2>
+
+            <div class="cart-items">
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <img src="img/productos/vasos trago largo fluor.jpg" alt="Producto 1">
+                    <div class="item-details">
+                        <h3>Set de Vasos Flúor</h3>
+                        <p>Cantidad: <input type="number" value="1" min="1"></p>
+                        <p>Precio: $900.00</p>
+                    </div>
+                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <img src="img/productos/tira led 5mts.jpg" alt="Producto 2">
+                    <div class="item-details">
+                        <h3>Tira led 5mts</h3>
+                        <p>Cantidad: <input type="number" value="1" min="1"></p>
+                        <p>Precio: $18000.00</p>
+                    </div>
+                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Resumen del Pedido</h3>
+                <p>Subtotal: <span>$3700.00</span></p>
+                <p>Envío: <span>A calcular</span></p>
+                <hr>
+                <p class="total-price">Total: <span>$3700.00</span></p>
+                <button class="btn btn-neon btn-checkout">Finalizar Compra</button>
+                <a href="index.html" class="continue-shopping">Seguir Comprando</a>
+            </div>
+        </section>
+
+        <section class="checkout-form-section" style="display: none;"> <!-- Oculto inicialmente -->
+            <h2>Información de Envío y Pago</h2>
+            <form class="checkout-form">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Dirección de Envío</legend>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                    <label for="cp">Código Postal:</label>
+                    <input type="text" id="cp" name="cp" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Método de Pago</legend>
+                    <p>Simulación de opciones de pago. Aquí irían integraciones reales.</p>
+                    <label><input type="radio" name="pago" value="tarjeta" checked> Tarjeta de Crédito/Débito</label>
+                    <label><input type="radio" name="pago" value="transferencia"> Transferencia Bancaria</label>
+                    <label><input type="radio" name="pago" value="mercadopago"> Mercado Pago</label>
+                </fieldset>
+                <button type="submit" class="btn btn-gold btn-confirm-order">Confirmar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+       <!-- ... (mismo footer que index.html) ... -->
+       <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Cotillón <span>Deluxe</span></h3>
+                <p>Tu tienda de artículos para fiestas con el mejor estilo. Hacemos de tu evento algo inolvidable.</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> +54 9 11 1234-5678</span>
+                    <span><i class="fas fa-envelope"></i> contacto@cotillondeluxe.com</span>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Suscríbete</h3>
+                <p>Recibe ofertas y novedades directamente en tu email.</p>
+                <form action="#">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit" class="btn btn-neon-small">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Cotillón Deluxe | Todos los derechos reservados. Diseñado con <i class="fas fa-heart"></i>.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/TUNUMERODEWHATSAPP" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
