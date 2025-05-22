@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras - SAJAN COTILLON</title>
+    <title>Sobre Nosotros - SAJAN COTILLON</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -30,7 +30,7 @@
                 <a href="#" class="nav-icon-item"><i class="fas fa-user"></i> <span class="icon-text">Mi Cuenta</span></a>
                 <a href="carrito.html" class="nav-icon-item">
                     <i class="fas fa-shopping-cart"></i> <span class="icon-text">Mi Carrito</span>
-                    <span class="cart-count">2</span> <!-- Ejemplo: 2 items en carrito -->
+                    <span class="cart-count">0</span>
                 </a>
             </div>
         </nav>
@@ -55,81 +55,34 @@
         </div>
     </header>
 
-    <main class="cart-page">
-        <section class="cart-container">
-            <h2>Tu Carrito de Compras</h2>
-
-            <div class="cart-items">
-                <!-- Item 1 -->
-                <div class="cart-item">
-                    <img src="img/productos/vasos trago largo fluor.jpg" alt="Producto 1">
-                    <div class="item-details">
-                        <h3>Set de Vasos Flúor</h3>
-                        <p>Cantidad: <input type="number" value="1" min="1"></p>
-                        <p>Precio: $900.00</p>
-                    </div>
-                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
-                </div>
-                <!-- Item 2 -->
-                <div class="cart-item">
-                    <img src="img/productos/tira led 5mts.jpg" alt="Producto 2">
-                    <div class="item-details">
-                        <h3>Tira led 5mts</h3>
-                        <p>Cantidad: <input type="number" value="1" min="1"></p>
-                        <p>Precio: $18000.00</p>
-                    </div>
-                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
-                </div>
-            </div>
-
-            <div class="cart-summary">
-                <h3>Resumen del Pedido</h3>
-                <p>Subtotal: <span>$3700.00</span></p>
-                <p>Envío: <span>A calcular</span></p>
-                <hr>
-                <p class="total-price">Total: <span>$3700.00</span></p>
-                <button class="btn btn-neon btn-checkout">Finalizar Compra</button>
-                <a href="index.html" class="continue-shopping">Seguir Comprando</a>
-            </div>
-        </section>
-
-        <section class="checkout-form-section" style="display: none;"> <!-- Oculto inicialmente -->
-            <h2>Información de Envío y Pago</h2>
-            <form class="checkout-form">
-                <fieldset>
-                    <legend>Datos Personales</legend>
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-                </fieldset>
-                <fieldset>
-                    <legend>Dirección de Envío</legend>
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" name="direccion" required>
-                    <label for="ciudad">Ciudad:</label>
-                    <input type="text" id="ciudad" name="ciudad" required>
-                    <label for="cp">Código Postal:</label>
-                    <input type="text" id="cp" name="cp" required>
-                </fieldset>
-                <fieldset>
-                    <legend>Método de Pago</legend>
-                    <p>Simulación de opciones de pago. Aquí irían integraciones reales.</p>
-                    <label><input type="radio" name="pago" value="tarjeta" checked> Tarjeta de Crédito/Débito</label>
-                    <label><input type="radio" name="pago" value="transferencia"> Transferencia Bancaria</label>
-                    <label><input type="radio" name="pago" value="mercadopago"> Mercado Pago</label>
-                </fieldset>
-                <button type="submit" class="btn btn-gold btn-confirm-order">Confirmar Pedido</button>
-            </form>
+    <main>
+        <section class="page-container about-us-content">
+            <h2>Sobre SAJAN COTILLON</h2>
+            <img src="https://images.unsplash.com/photo-1556942004-9a4f7e2f5b82?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nuestra Tienda">
+            <p>
+                En SAJAN COTILLON, creemos que cada celebración es una oportunidad para crear recuerdos inolvidables. Desde nuestros inicios, nos hemos dedicado a ser tu aliado perfecto, ofreciendo una selección exclusiva de artículos de cotillón que combinan calidad, originalidad y ese toque especial de glamour neón que nos distingue.
+            </p>
+            <p>
+                Nuestra pasión es iluminar tus fiestas, desde cumpleaños vibrantes y reuniones con amigos hasta eventos temáticos y celebraciones a gran escala. Nos esforzamos por traerte los productos más innovadores y las tendencias más actuales, asegurando que tu evento brille con luz propia.
+            </p>
+            <p>
+                Nos enorgullecemos de brindar una atención al cliente excepcional, con envíos rápidos a todo el país y la seguridad en cada una de tus compras. ¡Únete a la experiencia SAJAN COTILLON y transforma tus fiestas en eventos legendarios!
+            </p>
+            <h3>Nuestros Valores:</h3>
+            <ul>
+                <li><i class="fas fa-star"></i> Innovación y Tendencia</li>
+                <li><i class="fas fa-lightbulb"></i> Calidad y Durabilidad</li>
+                <li><i class="fas fa-heart"></i> Pasión por la Celebración</li>
+                <li><i class="fas fa-shipping-fast"></i> Eficiencia en Cada Envío</li>
+                <li><i class="fas fa-smile"></i> Satisfacción del Cliente</li>
+            </ul>
         </section>
     </main>
 
     <footer>
        <div class="footer-content">
             <div class="footer-section about">
-                <a href="index.html"><span><img src="img/logo sajan blanco@4x-8.png" alt="SAJAN COTILLON"></span> </a>
+                <a href="index.html"><span><img src="img/logo sajan blanco@4x-8.png" alt="SAJAN COTILLON" class="logo-foot"></span> </a>
                 <p>Tu tienda de artículos para fiestas con el mejor estilo. Hacemos de tu evento algo inolvidable.</p>
                 <div class="contact">
                     <span><i class="fas fa-phone"></i> +54 9 3875 79-3425</span>

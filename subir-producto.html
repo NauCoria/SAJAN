@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAJAN COTILLON</title>
+    <title>Subir Producto - SAJAN COTILLON</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -56,112 +56,49 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>NOCHES DE FIESTA INOLVIDABLES</h1>
-                <p>Todo lo que necesitas para tu evento con un toque de glamour y neón.</p>
-                <a href="#productos" class="btn btn-neon">Ver Productos Estrella</a>
-            </div>
-        </section>
-
-        <section class="promociones">
-            <div class="promo-item">
-                <i class="fas fa-credit-card"></i>
-                <h3>Pagos Seguros</h3>
-                <p>Múltiples medios de pago</p>
-            </div>
-            <div class="promo-item">
-                <i class="fas fa-shipping-fast"></i>
-                <h3>Envíos Rápidos</h3>
-                <p>A todo el país</p>
-            </div>
-            <div class="promo-item">
-                <i class="fas fa-tags"></i>
-                <h3>Ofertas Exclusivas</h3>
-                <p>Descuentos semanales</p>
-            </div>
-        </section>
-
-        <section id="productos" class="product-grid">
-            <h2>Productos Destacados</h2>
-            <div class="grid-container">
-                <!-- Producto 1 (Enlaza a producto.html) -->
-                <div class="product-card">
-                    <a href="producto.html">
-                        <div class="product-image">
-                            <img src="img/productos/inflador de globos.png" alt="Producto 1">
-                            <span class="product-tag-neon">¡NUEVO!</span>
-                        </div>
-                        <h3>inflador de globos</h3>
-                        <p class="product-price">$2500.00</p>
-                    </a>
-                    <button class="btn btn-add-to-cart">Agregar al Carrito</button>
+        <section class="page-container upload-form-container">
+            <h2>Subir Nuevo Producto</h2>
+            <form class="upload-form">
+                <div class="form-group">
+                    <label for="product-name">Nombre del Producto:</label>
+                    <input type="text" id="product-name" name="product-name" placeholder="Ej: Globos LED Fiesta" required>
                 </div>
-                <!-- Producto 2 (Enlaza a producto.html) -->
-                <div class="product-card">
-                    <a href="producto.html">
-                        <div class="product-image">
-                            <img src="img/productos/panel shimer.png" alt="Producto 2">
-                        </div>
-                        <h3>Panel Shimmer</h3>
-                        <p class="product-price">$7000.00</p>
-                    </a>
-                    <button class="btn btn-add-to-cart">Agregar al Carrito</button>
+                <div class="form-group">
+                    <label for="product-description">Descripción:</label>
+                    <textarea id="product-description" name="product-description" rows="5" placeholder="Una descripción detallada del producto..." required></textarea>
                 </div>
-                <!-- Producto 3 (Enlaza a producto.html) -->
-                <div class="product-card">
-                    <a href="producto.html">
-                        <div class="product-image">
-                            <img src="img/productos/mascaras.jpg" alt="Producto 3">
-                             <span class="product-tag-oferta">OFERTA</span>
-                        </div>
-                        <h3>Mascaras Halloween</h3>
-                        <p class="product-price-old">$3000.00</p>
-                        <p class="product-price">$1900.00</p>
-                    </a>
-                    <button class="btn btn-add-to-cart">Agregar al Carrito</button>
+                <div class="form-group">
+                    <label for="product-price">Precio:</label>
+                    <input type="number" id="product-price" name="product-price" step="0.01" min="0" placeholder="Ej: 1500.50" required>
                 </div>
-                <!-- Producto 4 (Enlaza a producto.html) -->
-                <div class="product-card">
-                    <a href="producto.html">
-                         <div class="product-image">
-                            <img src="img/productos/combo cumpleaños.jpg" alt="Producto 4">
-                        </div>
-                        <h3>Combo Cumpleaños</h3>
-                        <p class="product-price">$15000.00</p>
-                    </a>
-                    <button class="btn btn-add-to-cart">Agregar al Carrito</button>
+                <div class="form-group">
+                    <label for="product-category">Categoría:</label>
+                    <select id="product-category" name="product-category" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="disfraces">Disfraces</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="decoracion-fluor">Decoración Fluor</option>
+                        <option value="globos">Globos</option>
+                        <option value="cotillon">Cotillón</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="ofertas">Ofertas</option>
+                    </select>
                 </div>
-            </div>
-            <a href="catalogo.html" class="btn btn-gold-outline">Ver Todos los Productos</a>
+                <div class="form-group">
+                    <label for="product-image">Imagen del Producto:</label>
+                    <input type="file" id="product-image" name="product-image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-tags">Tags (separados por coma):</label>
+                    <input type="text" id="product-tags" name="product-tags" placeholder="Ej: neón, fiesta, brillo, diversión">
+                </div>
+                <button type="submit" class="btn btn-gold">Subir Producto</button>
+            </form>
         </section>
-
-        <section class="categorias-destacadas">
-            <h2>Categorías Populares</h2>
-            <div class="categorias-grid">
-                <a href="#" class="categoria-card">
-                    <img src="img/categorias/pexels-thais-silva-965543-2204724.jpg" alt="Neón Party">
-                    <span>Neón Party</span>
-                </a>
-                <a href="#" class="categoria-card">
-                    <img src="img/categorias/pexels-ioanamtc-19682678.jpg" alt="Golden Glam">
-                    <span>Golden Glam</span>
-                </a>
-                <a href="#" class="categoria-card">
-                    <img src="img/categorias/deco fluor.jpg" alt="Decoración Flúor">
-                    <span>Deco Flúor</span>
-                </a>
-                <a href="#" class="categoria-card">
-                    <img src="img/categorias/9faac142780221f699a9a1ca9c859ef9.jpg" alt="Accesorios">
-                    <span>Accesorios</span>
-                </a>
-            </div>
-        </section>
-
     </main>
 
     <footer>
-        <div class="footer-content">
+       <div class="footer-content">
             <div class="footer-section about">
                 <a href="index.html"><span><img src="img/logo sajan blanco@4x-8.png" alt="SAJAN COTILLON" class="logo-foot"></span> </a>
                 <p>Tu tienda de artículos para fiestas con el mejor estilo. Hacemos de tu evento algo inolvidable.</p>
