@@ -920,14 +920,23 @@ footer {
 .about-us-content {
     text-align: center;
 }
-.about-us-content img {
-    max-width: 80%;
+.about-us-content video {
+    max-width: 50%;
     height: auto;
     border-radius: 10px;
     margin: 2rem auto;
     border: 2px solid var(--color-gold);
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
+
+.video-about{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .about-us-content p {
     font-size: 1.1rem;
     color: var(--color-text-muted);
